@@ -10,10 +10,27 @@ body{
     border-style: solid;
     border-radius: 3px;
     border-color: darkred;
-    margin-right: 60%;
+    margin-right: auto;
 }
 
 #CombatHeading{
     margin-left: 1%;
     text-decoration: underline;
+}
+
+DIV.table 
+{
+    display:table;
+}
+FORM.tr, DIV.tr
+{
+    display:table-row;
+}
+SPAN.td
+{
+    display:table-cell;
+    border:1px solid black;
+    border-radius: 2px;
+    padding:1px;
+    background-color: lightgray;
 }

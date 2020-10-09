@@ -11,9 +11,32 @@
 
     <div id="Combats">
     <h3 id="CombatHeading">Combat x</h3>
-        <P>Combat tables</P>
-        <br>
+    <div class="table">
+    <div class="tr">
+        <span class="td">(cell data)</span>
+        <span class="td">(cell data)</span>
+        <span class="td">(cell data)</span>
+        <span class="td">(cell data)</span>
+        <span class="td">(cell data)</span>
+        <span class="td">(cell data)</span>
+        <span class="td">(cell data)</span>
+    </div>
+    <form class="tr" id="frm_createFighter">
+        <span class="td"><input id="in_FighterInit" type="number" placeholder="Init" required name="nm_FighterInit"></span>
 
+        <span class="td"><input id="in_FighterName" placeholder="Name" required name="nm_FighterName"></span>
+
+        <span class="td"><input id="in_FighterAC" type="number" placeholder="AC" required name="nm_FighterAC"></span>
+
+        <span class="td"><input id="in_FighterHP" type="number" placeholder="HP" name="nm_FighterHP"></span>
+
+        <span class="td"><input id="in_FighterMaxHP" type="number" placeholder="Max HP" name="nm_FighterMaxHP"></span>
+
+        <span class="td"><input id="in_FighterPC" type="checkbox" name="nm_FighterPC"></span>
+
+        <span class="td"><button type="submit">+</button></span>
+    </form>
+</div>
 
     </div>
     <script src="CN-DnD.js"></script>
