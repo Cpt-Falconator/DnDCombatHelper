@@ -34,4 +34,16 @@ public class DnDCombatService {
 		// oldWood.setX(combat.getx());
 		this.cRepo.save(oldCom);
 	}
+
+	public void patchCombatAC(int id, int mod) {
+		Combat oldCom = this.cRepo.findById(id).get();
+		oldCom.setArmorClass(oldCom.getArmorClass() + mod);
+		this.cRepo.save(oldCom);
+	}
+
+	public void patchCombatHP(int id, int mod) {
+		Combat oldCom = this.cRepo.findById(id).get();
+		oldCom.setHealthPoints(oldCom.getHealthPoints() + mod);
+		this.cRepo.save(oldCom);
+	}
 }

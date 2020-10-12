@@ -32,56 +32,81 @@ function reloadCombats() {
             combatOutput.innerHTML = '';
             combatList.forEach(function(combat) {
 
-                const field = document.createElement("div");
-                field.className = "field";
-                combatOutput.appendChild(field);
-
-                const fieldBody = document.createElement("div");
-                fieldBody.className = "field-body";
-                field.appendChild(fieldBody);
-
                 const init = document.createElement("span");
                 init.className = "td";
                 init.innerText = combat.initiative;
-                fieldBody.appendChild(init);
+                combatOutput.appendChild(init);
 
                 const name = document.createElement("span");
                 name.className = "td";
                 name.innerText = combat.name;
-                fieldBody.appendChild(name);
+                combatOutput.appendChild(name);
 
                 const aClass = document.createElement("span");
                 aClass.className = "td";
                 aClass.innerText = combat.armorClass;
-                fieldBody.appendChild(aClass);
+
+                const mButton = document.createElement("button");
+                    mButton.className = "button";
+                    mButton.innerText = "-";
+                    mButton.addEventListener("click", function () {
+                            updateAC(combat.id, -1);
+                        })
+                    aClass.prepend(mButton); 
+
+                const aButton = document.createElement("button");
+                aButton.className = "button";
+                aButton.innerText = "+";
+                aButton.addEventListener("click", function () {
+                            updateAC(combat.id, 1);
+                    })
+                aClass.appendChild(aButton); 
+                combatOutput.appendChild(aClass);
 
                 const cHP = document.createElement("span");
                 cHP.className = "td";
                 cHP.innerText = combat.healthPoints;
-                fieldBody.appendChild(cHP);
+
+                const mButton2 = document.createElement("button");
+                mButton2.className = "button";
+                mButton2.innerText = "-";
+                mButton2.addEventListener("click", function () {
+                        updateHP(combat.id, -1);
+                    })
+                cHP.prepend(mButton2); 
+
+                const aButton2 = document.createElement("button");
+                aButton2.className = "button";
+                aButton2.innerText = "+";
+                aButton2.addEventListener("click", function () {
+                        updateHP(combat.id, 1);
+                    })
+                cHP.appendChild(aButton2)
+
+                combatOutput.appendChild(cHP);
 
                 const mHP = document.createElement("span");
                 mHP.className = "td";
                 mHP.innerText = combat.maxHealthPoints;
-                fieldBody.appendChild(mHP);
+                combatOutput.appendChild(mHP);
 
                 const isP = document.createElement("span");
                 isP.className = "td";
                 isP.innerText = combat.player;
-                fieldBody.appendChild(isP);
+                combatOutput.appendChild(isP);
 
                 const deleteSpan = document.createElement("span");
                 deleteSpan.className = "td";
                 
-
-                const deleteButton = document.createElement("button");
-                deleteButton.className = "button";
-                deleteButton.innerText = "-";
-                deleteButton.addEventListener("click", function () {
-                    deleteCombat(combat.id);
-                })
+                    const deleteButton = document.createElement("button");
+                    deleteButton.className = "button";
+                    deleteButton.innerText = "-";
+                    deleteButton.addEventListener("click", function () {
+                        deleteCombat(combat.id);
+                    })
+                    
                 deleteSpan.appendChild(deleteButton);     
-                fieldBody.appendChild(deleteSpan);           
+                combatOutput.appendChild(deleteSpan);           
             });
         }).catch(error => console.error(error));
 }
@@ -93,4 +118,26 @@ function deleteCombat(id) {
         method: "DELETE"
     }).then(response => reloadCombats())
     .catch(error => console.error(error));
+}
+
+function updateAC(id, mod){
+    fetch("http://localhost:8081/patch/combatAC/" + id,{
+        method: "PATCH",
+        body: JSON.stringify(mod),
+        headers: {
+            'Content-Type': "application/json",
+        }
+    }).then(response => reloadCombats())
+    .catch(error => console.log(error));
+}
+
+function updateHP(id, mod){
+    fetch("http://localhost:8081/patch/combatHP/" + id,{
+        method: "PATCH",
+        body: JSON.stringify(mod),
+        headers: {
+            'Content-Type': "application/json",
+        }
+    }).then(response => reloadCombats())
+    .catch(error => console.log(error));
 }
