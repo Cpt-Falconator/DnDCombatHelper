@@ -1,6 +1,15 @@
 package com.qa.demo.persistance.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Combat {
+
+	@Id
+	@GeneratedValue
+	private int id;
 
 	private int initiative;
 
@@ -75,6 +84,14 @@ public class Combat {
 
 	public void setInitiative(int initiative) {
 		this.initiative = initiative;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void getId(int id) {
+		this.id = id;
 	}
 
 }
