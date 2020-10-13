@@ -30,12 +30,12 @@ public class Combat {
 	public Combat(int initiative, String name, int armorClass, int healthPoints, int maxHealthPoints,
 			boolean isPlayer) {
 		super();
-		this.initiative = initiative;
-		this.name = name;
-		this.armorClass = armorClass;
-		this.healthPoints = healthPoints;
-		this.maxHealthPoints = maxHealthPoints;
-		this.isPlayer = isPlayer;
+		setInitiative(initiative);
+		setName(name);
+		setArmorClass(armorClass);
+		setHealthPoints(healthPoints);
+		setMaxHealthPoints(maxHealthPoints);
+		setPlayer(isPlayer);
 	}
 
 	public boolean isPlayer() {
