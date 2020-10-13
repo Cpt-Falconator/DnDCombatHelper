@@ -1,14 +1,15 @@
-package com.qa.demo.persistance.domain;
+package com.qa.dnd.persistance.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Combat {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
 	private int initiative;
@@ -90,7 +91,7 @@ public class Combat {
 		return id;
 	}
 
-	public void getId(int id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
