@@ -32,15 +32,18 @@ function reloadCombats() {
             combatOutput.innerHTML = '';
             combatList.forEach(function(combat) {
 
+                const newLine = document.createElement("tr");
+                newLine.className = "td";
+                
                 const init = document.createElement("span");
                 init.className = "td";
                 init.innerText = combat.initiative;
-                combatOutput.appendChild(init);
+                newLine.appendChild(init);
 
                 const name = document.createElement("span");
                 name.className = "td";
                 name.innerText = combat.name;
-                combatOutput.appendChild(name);
+                newLine.appendChild(name);
 
                 const aClass = document.createElement("span");
                 aClass.className = "td";
@@ -61,7 +64,7 @@ function reloadCombats() {
                             updateAC(combat.id, 1);
                     })
                 aClass.appendChild(aButton); 
-                combatOutput.appendChild(aClass);
+                newLine.appendChild(aClass);
 
                 const cHP = document.createElement("span");
                 cHP.className = "td";
@@ -83,17 +86,17 @@ function reloadCombats() {
                     })
                 cHP.appendChild(aButton2)
 
-                combatOutput.appendChild(cHP);
+                newLine.appendChild(cHP);
 
                 const mHP = document.createElement("span");
                 mHP.className = "td";
                 mHP.innerText = combat.maxHealthPoints;
-                combatOutput.appendChild(mHP);
+                newLine.appendChild(mHP);
 
                 const isP = document.createElement("span");
                 isP.className = "td";
                 isP.innerText = combat.player;
-                combatOutput.appendChild(isP);
+                newLine.appendChild(isP);
 
                 const deleteSpan = document.createElement("span");
                 deleteSpan.className = "td";
@@ -106,8 +109,10 @@ function reloadCombats() {
                     })
                     
                 deleteSpan.appendChild(deleteButton);     
-                combatOutput.appendChild(deleteSpan);           
+                newLine.appendChild(deleteSpan);    
+                combatOutput.parentElement.appendChild(newLine);       
             });
+            combatOutput.parentElement.appendChild(frm_createFighter);
         }).catch(error => console.error(error));
 }
 
