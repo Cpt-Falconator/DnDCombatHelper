@@ -1,5 +1,8 @@
+const combatContainer = document.getElementById("tbl_Combat");
+const containerHeadings = document.getElementById("tbl_heading");
+const combatOutput = document.getElementById("out_combat");
 const createForm = document.getElementById("frm_createFighter");
-const combatOutput = document.getElementById("out_CombatList");
+
 
 createForm.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -10,7 +13,7 @@ createForm.addEventListener('submit', function (event) {
         armorClass: this.nm_FighterAC.value,
         healthPoints: this.nm_FighterHP.value,
         maxHealthPoints: this.nm_FighterMaxHP.value,
-        isPlayer: this.nm_FighterPC.value
+        player: this.nm_FighterPC.checked
     }
     fetch("http://localhost:8081/create/combat", { //Make request
         method: "POST",
@@ -24,30 +27,40 @@ createForm.addEventListener('submit', function (event) {
     }).catch(error => console.log(error));
 });
 
-
 function reloadCombats() {
     fetch("http://localhost:8081/get/allCombat")
         .then(response => response.json())
         .then(combatList => {
-            combatOutput.innerHTML = '';
+            combatContainer.innerHTML =''
             combatList.forEach(function(combat) {
 
-                const newLine = document.createElement("tr");
-                newLine.className = "td";
-                
-                const init = document.createElement("span");
-                init.className = "td";
-                init.innerText = combat.initiative;
+                const newLine = document.createElement("div");
+                newLine.className = "row";
+
+                //Creating a new initiative
+                const init = document.createElement("div");
+                init.className = "col";
+                //Creating a new text for initiative
+                const initp = document.createElement("p");
+                initp.innerText = combat.initiative;
+                init.appendChild(initp);
                 newLine.appendChild(init);
 
-                const name = document.createElement("span");
-                name.className = "td";
-                name.innerText = combat.name;
+                //Creating a new name
+                const name = document.createElement("div");
+                name.className = "col";
+                //Creating a new text for name
+                const initName = document.createElement("p");
+                initName.innerText = combat.name;
+                name.appendChild(initName);
                 newLine.appendChild(name);
 
-                const aClass = document.createElement("span");
-                aClass.className = "td";
-                aClass.innerText = combat.armorClass;
+                //Creating a new Armor class
+                const aClass = document.createElement("div");
+                aClass.className = "col";
+                const aClassVal = document.createElement("p");
+                aClassVal.innerText = combat.armorClass;
+                aClass.appendChild(aClassVal);
 
                 const mButton = document.createElement("button");
                     mButton.className = "button";
@@ -66,9 +79,11 @@ function reloadCombats() {
                 aClass.appendChild(aButton); 
                 newLine.appendChild(aClass);
 
-                const cHP = document.createElement("span");
-                cHP.className = "td";
-                cHP.innerText = combat.healthPoints;
+                const cHP = document.createElement("div");
+                cHP.className = "col";
+                const cHPVal = document.createElement("p");
+                cHPVal.innerText = combat.healthPoints;
+                cHP.appendChild(cHPVal);
 
                 const mButton2 = document.createElement("button");
                 mButton2.className = "button";
@@ -85,21 +100,25 @@ function reloadCombats() {
                         updateHP(combat.id, 1);
                     })
                 cHP.appendChild(aButton2)
-
                 newLine.appendChild(cHP);
 
-                const mHP = document.createElement("span");
-                mHP.className = "td";
-                mHP.innerText = combat.maxHealthPoints;
+
+                const mHP = document.createElement("div");
+                mHP.className = "col";
+                const mHPval = document.createElement("p");
+                mHPval.innerText = combat.maxHealthPoints;
+                mHP.appendChild(mHPval);
                 newLine.appendChild(mHP);
 
-                const isP = document.createElement("span");
-                isP.className = "td";
-                isP.innerText = combat.player;
+                const isP = document.createElement("div");
+                isP.className = "col";
+                const isPval = document.createElement("p");
+                isPval.innerText = combat.player;
+                isP.appendChild(isPval);
                 newLine.appendChild(isP);
 
-                const deleteSpan = document.createElement("span");
-                deleteSpan.className = "td";
+                const deleteSpan = document.createElement("div");
+                deleteSpan.className = "col";
                 
                     const deleteButton = document.createElement("button");
                     deleteButton.className = "button";
@@ -110,9 +129,10 @@ function reloadCombats() {
                     
                 deleteSpan.appendChild(deleteButton);     
                 newLine.appendChild(deleteSpan);    
-                combatOutput.parentElement.appendChild(newLine);       
+                combatContainer.appendChild(newLine);       
             });
-            combatOutput.parentElement.appendChild(frm_createFighter);
+            combatContainer.prepend(containerHeadings);
+            combatContainer.appendChild(createForm);
         }).catch(error => console.error(error));
 }
 

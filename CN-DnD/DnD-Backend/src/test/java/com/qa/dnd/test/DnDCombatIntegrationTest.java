@@ -120,6 +120,7 @@ public class DnDCombatIntegrationTest {
 		ResultMatcher checkStatus = status().isOk();
 
 		this.mockMvc.perform(request).andExpect(checkStatus);
+		System.out.println(responseBody);
 	}
 
 }

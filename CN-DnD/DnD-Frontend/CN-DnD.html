@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabletop Combat Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="CN-DnD.css">
 </head>
 <body>
@@ -11,42 +12,36 @@
 
     <!-- FIX THE ISSUE OF HAVING MULITPLE LINES!-->
     <div id="Combats">
-    <h3 id="CombatHeading">Combat x</h3>
-    <div class="table">
-    <div class="tr">
-        <span class="td">Initiative</span>
-        <span class="td">Character Name</span>
-        <span class="td">AC</span>
-        <span class="td">Current HP</span>
-        <span class="td">Max HP</span>
-        <span class="td">Player Character</span>
-        <span class="td">Add</span>
-    </div>
-    <div class="tr" id="out_CombatList">
-        <span class="td">Initiative</span>
-        <span class="td">Character Name</span>
-        <span class="td">AC</span>
-        <span class="td">Current HP</span>
-        <span class="td">Max HP</span>
-        <span class="td">Player Character</span>
-        <span class="td">Add</span>
-    </div>
-    <form class="tr" id="frm_createFighter">
-        <span class="td"><input id="in_FighterInit" type="number" placeholder="Init" required name="nm_FighterInit"></span>
+        <h3 id="CombatHeading">Combat x</h3>
+            <div class="container" id="tbl_Combat">
+                <div class="row" id="tbl_heading">
+                    <div class="col"><p>Initiative</p></div>
+                    <div class="col"><p>Character Name</p></div>
+                    <div class="col"><p>AC</p></div>
+                    <div class="col"><p>Current HP</p></div>
+                    <div class="col"><p>Max HP</p></div>
+                    <div class="col"><p>Player Character</p></div>
+                    <div class="col"><p>Add</p></div>
+                </div>
+                <div class="row" id="out_combat">
 
-        <span class="td"><input id="in_FighterName" placeholder="Name" required name="nm_FighterName"></span>
+                </div>
+                <form class="row" id="frm_createFighter">
+                    <div class="col"><input id="in_FighterInit" type="number" placeholder="Init" required name="nm_FighterInit"></div>
 
-        <span class="td"><input id="in_FighterAC" type="number" placeholder="AC" required name="nm_FighterAC"></span>
+                    <div class="col"><input id="in_FighterName" placeholder="Name" required name="nm_FighterName"></div>
 
-        <span class="td"><input id="in_FighterHP" type="number" placeholder="HP" name="nm_FighterHP"></span>
+                    <div class="col"><input id="in_FighterAC" type="number" placeholder="AC" required name="nm_FighterAC"></div>
 
-        <span class="td"><input id="in_FighterMaxHP" type="number" placeholder="Max HP" name="nm_FighterMaxHP"></span>
+                    <div class="col"><input id="in_FighterHP" type="number" placeholder="HP" name="nm_FighterHP"></div>
 
-        <span class="td"><input id="in_FighterPC" type="checkbox" name="nm_FighterPC"></span>
+                    <div class="col"><input id="in_FighterMaxHP" type="number" placeholder="Max HP" name="nm_FighterMaxHP"></div>
 
-        <span class="td"><button type="submit">+</button></span>
-    </form>
-</div>
+                    <div class="col"><input id="in_FighterPC" type="checkbox" name="nm_FighterPC"></div>
+
+                    <div class="col"><button type="submit" value="FALSE">+</button></div>
+                </form>
+            </div>
 
     </div>
     <script src="CN-DnD.js"></script>

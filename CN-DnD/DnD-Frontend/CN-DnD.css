@@ -18,15 +18,15 @@ body{
     text-decoration: underline;
 }
 
-DIV.table
+.container
 {
     display:table;
 }
-FORM.tr, DIV.tr
+.row
 {
     display:table-row;
 }
-SPAN.td
+.col
 {
     display:table-cell;
     border:1px solid black;

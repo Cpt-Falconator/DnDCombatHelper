@@ -22,7 +22,7 @@ public class Combat {
 
 	private int maxHealthPoints;
 
-	private boolean isPlayer;
+	private boolean player;
 
 	public Combat() {
 		super();
@@ -40,11 +40,11 @@ public class Combat {
 	}
 
 	public boolean isPlayer() {
-		return isPlayer;
+		return player;
 	}
 
 	public void setPlayer(boolean isPlayer) {
-		this.isPlayer = isPlayer;
+		this.player = isPlayer;
 	}
 
 	public int getMaxHealthPoints() {
