@@ -133,7 +133,10 @@ function reloadCombats() {
             });
             combatContainer.prepend(containerHeadings);
             combatContainer.appendChild(createForm);
-        }).catch(error => console.error(error));
+        }).catch(error => {
+            console.error(error);
+            this.location = "/Error/503.html"
+        });
 }
 
 reloadCombats();
