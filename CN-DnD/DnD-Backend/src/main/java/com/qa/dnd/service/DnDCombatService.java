@@ -26,8 +26,12 @@ public class DnDCombatService {
 	}
 
 	public boolean deleteCombat(int id) {
-		this.cRepo.deleteById(id);
-		return !this.cRepo.existsById(id);
+		if (this.cRepo.existsById(id)) {
+			this.cRepo.deleteById(id);
+			return !this.cRepo.existsById(id);
+		} else {
+			return false;
+		}
 	}
 
 	public Combat patchCombatAC(int id, int mod) {

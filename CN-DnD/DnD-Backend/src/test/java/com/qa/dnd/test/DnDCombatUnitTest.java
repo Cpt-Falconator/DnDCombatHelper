@@ -67,13 +67,25 @@ public class DnDCombatUnitTest {
 	}
 
 	@Test
-	void testDeleteCombat() {
+	void testSuccssfulDeleteCombat() {
+		int ID = 1;
+		boolean idFound = true;
+
+		Mockito.when(this.cRepo.existsById(ID)).thenReturn(idFound);
+
+		assertThat(this.cService.deleteCombat(ID)).isEqualTo(!idFound);
+
+		Mockito.verify(this.cRepo, Mockito.times(2)).existsById(ID);
+	}
+
+	@Test
+	void testunsuccssfulDeleteCombat() {
 		int ID = 1;
 		boolean idFound = false;
 
 		Mockito.when(this.cRepo.existsById(ID)).thenReturn(idFound);
 
-		assertThat(this.cService.deleteCombat(ID)).isEqualTo(!idFound);
+		assertThat(this.cService.deleteCombat(ID)).isEqualTo(idFound);
 
 		Mockito.verify(this.cRepo, Mockito.times(1)).existsById(ID);
 	}
@@ -113,4 +125,5 @@ public class DnDCombatUnitTest {
 		Mockito.verify(this.cRepo, Mockito.times(1)).findById(ID);
 		Mockito.verify(this.cRepo, Mockito.times(1)).save(oldCombatant);
 	}
+
 }

@@ -21,5 +21,4 @@ class DnDBackendApplicationTests {
 	void giveCoveragePlz() {
 		EqualsVerifier.forClass(Combat.class).usingGetClass().verify();
 	}
-
 }

@@ -72,7 +72,13 @@ public class DnDCombatIntegrationTest {
 
 	@Test
 	void testUnsuccessfulDelete() throws Exception {
+		int ID_TO_DELETE = 99;
 
+		RequestBuilder request = delete("/delete/combat/" + ID_TO_DELETE);
+
+		ResultMatcher checkStatus = status().isBadRequest();
+
+		this.mockMvc.perform(request).andExpect(checkStatus);
 	}
 
 	@Test
