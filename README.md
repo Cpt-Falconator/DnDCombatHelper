@@ -8,7 +8,7 @@
 * [Risk Assessment](#risk-assessment)
 * [Testing](#testing)
 * [Front End Navigation](#front-end-navigation)
-* [Aknowledgements](#kknowledgements)
+* [Aknowledgements](#aknowledgements)
 
 ## Brief
 The initial brief has the following objective:
@@ -44,7 +44,16 @@ Above is a very simplistic overview of how my application will meet the requirem
 The Risk Assessment can be found [HERE](https://docs.google.com/spreadsheets/d/18PtaOa57idXkrjRYaGYh24uJ5BQsMJKyTU1PyvYnzXI/edit?usp=sharing)
 
 ## Testing
+This application is being tested using a mixture of JUnit, SpringBoot and Mockito.
+
+Using these three techniques together, I have split testing into 2 categories.
+	*[Unit Testing](#unit-tests)
+	*[Integration Testing](#integration-tests)
+	
+### Unit Tests
+
+### Integration Tests
 
 ## Front End Navigation
 
-##Aknowledgements
+## Aknowledgements
