@@ -27,10 +27,21 @@ Along with the previous brief, the minimum requirements to achieve MVP (Minimum 
 - Code fully integrated into a Version Control System
 
 ### Solution
+My solution to this objective and requirements is to create an application that can assist Dungeon Masters in the game "Dungeons and Dragons" (or similar tabletop RPG's) by allowing the user to;
+
+- CREATE an entry for a combatant in a given encounter.
+- READ the data for the combatant, such as Initiative (for turn order), health points, etc.
+- UPDATE certain stats for the combatant, such as raising or lowering their armour class or current health points.
+- DELETE a combtant from the list if they are removed from combat for any (in game) reason.
+
+Above is a very simplistic overview of how my application will meet the requirements, however a more detailed list can be found in the [following section](#planning)
 
 ## Planning
 
+
+
 ## Risk Assessment
+The Risk Assessment can be found [HERE](https://docs.google.com/spreadsheets/d/18PtaOa57idXkrjRYaGYh24uJ5BQsMJKyTU1PyvYnzXI/edit?usp=sharing)
 
 ## Testing
 
