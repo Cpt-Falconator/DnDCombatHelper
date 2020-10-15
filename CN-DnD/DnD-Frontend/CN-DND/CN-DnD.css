@@ -29,8 +29,29 @@ body{
 .col
 {
     display:table-cell;
+    align-content: center;
     border:1px solid black;
     border-radius: 2px;
     padding:1px;
     background-color: lightgray;
+    width:fit-content;
 }
+p
+{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+button
+{
+    font-size: small;
+    height: 25px;
+    width:25px;
+}
+
+#in_FighterPC
+{
+    margin: auto;
+    display: flex;
+}
+

@@ -68,7 +68,7 @@ function reloadCombats() {
                     mButton.addEventListener("click", function () {
                             updateAC(combat.id, -1);
                         })
-                    aClass.prepend(mButton); 
+                        aClassVal.prepend(mButton); 
 
                 const aButton = document.createElement("button");
                 aButton.className = "button";
@@ -76,7 +76,7 @@ function reloadCombats() {
                 aButton.addEventListener("click", function () {
                             updateAC(combat.id, 1);
                     })
-                aClass.appendChild(aButton); 
+                    aClassVal.appendChild(aButton); 
                 newLine.appendChild(aClass);
 
                 const cHP = document.createElement("div");
@@ -91,7 +91,7 @@ function reloadCombats() {
                 mButton2.addEventListener("click", function () {
                         updateHP(combat.id, -1);
                     })
-                cHP.prepend(mButton2); 
+                    cHPVal.prepend(mButton2); 
 
                 const aButton2 = document.createElement("button");
                 aButton2.className = "button";
@@ -99,7 +99,7 @@ function reloadCombats() {
                 aButton2.addEventListener("click", function () {
                         updateHP(combat.id, 1);
                     })
-                cHP.appendChild(aButton2)
+                    cHPVal.appendChild(aButton2)
                 newLine.appendChild(cHP);
 
 

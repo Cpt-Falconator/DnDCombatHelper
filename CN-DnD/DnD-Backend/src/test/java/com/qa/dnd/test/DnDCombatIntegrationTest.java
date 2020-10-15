@@ -71,6 +71,11 @@ public class DnDCombatIntegrationTest {
 	}
 
 	@Test
+	void testUnsuccessfulDelete() throws Exception {
+
+	}
+
+	@Test
 	void testUpdateAC() throws Exception {
 
 		String ID_TO_EDIT = "1";
