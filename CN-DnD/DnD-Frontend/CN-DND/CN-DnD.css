@@ -10,7 +10,7 @@ body{
     border-style: solid;
     border-radius: 3px;
     border-color: darkred;
-    margin-right: auto;
+    margin-right: inherit;
 }
 
 #CombatHeading{
