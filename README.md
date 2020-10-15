@@ -9,7 +9,7 @@
 * [Testing](#testing)
 	* [Unit Tests](#unit-tests)
 	* [Integration Tests](#integration-tests)
-* [Testing (cont)](#testing-(cont))
+* [Testing (cont)](#testing-cont)
 * [Front End Navigation](#front-end-navigation)
 * [Aknowledgements](#aknowledgements)
 
@@ -63,6 +63,7 @@ Integration tests are real tests run on an isolated, pre-determined version of t
 A total of 7 integration tests were perforomed, all returning successful.
 
 ## Testing (cont)
+In total, 13 JUnit tests were run, which returned a total code coverage of 99.4%.
 
 ## Front End Navigation
 
