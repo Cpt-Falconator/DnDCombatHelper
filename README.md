@@ -7,6 +7,9 @@
 * [Planning](#planning)
 * [Risk Assessment](#risk-assessment)
 * [Testing](#testing)
+	* [Unit Tests](#unit-tests)
+	* [Integration Tests](#integration-tests)
+* [Testing (cont)](#testing-(cont))
 * [Front End Navigation](#front-end-navigation)
 * [Aknowledgements](#aknowledgements)
 
@@ -47,12 +50,19 @@ The Risk Assessment can be found [HERE](https://docs.google.com/spreadsheets/d/1
 This application is being tested using a mixture of JUnit, SpringBoot and Mockito.
 
 Using these three techniques together, I have split testing into 2 categories.
-	*[Unit Testing](#unit-tests)
-	*[Integration Testing](#integration-tests)
+	* [Unit Testing](#unit-tests)
+	* [Integration Testing](#integration-tests)
 	
 ### Unit Tests
+Unit Tests are performed by running each accessible function in isolation to one another, allowing for logic checks in order to highlight if any new additions or changes to old code will break or disrupt already working features.
+This is possible highly thanks to Mockito, which (essentially) replicates return types for functions that are requiring external data, therfore any logic will still be applied, but you are testing weather or not things would function and return with expected values.
+A total of 6 unit tests were performed, all returning successful.
 
 ### Integration Tests
+Integration tests are real tests run on an isolated, pre-determined version of the database, so that all requests and access to the database can be verified and tested for faults.
+A total of 7 integration tests were perforomed, all returning successful.
+
+## Testing (cont)
 
 ## Front End Navigation
 

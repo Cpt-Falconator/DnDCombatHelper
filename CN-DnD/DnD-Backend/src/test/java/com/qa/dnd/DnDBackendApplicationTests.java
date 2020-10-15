@@ -13,12 +13,7 @@ import nl.jqno.equalsverifier.EqualsVerifier;
 class DnDBackendApplicationTests {
 
 	@Test
-	void contextLoads() {
-
-	}
-
-	@Test
-	void giveCoveragePlz() {
+	void testEqualsVerifier() {
 		EqualsVerifier.forClass(Combat.class).usingGetClass().verify();
 	}
 }
