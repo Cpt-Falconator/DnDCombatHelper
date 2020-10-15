@@ -20,6 +20,12 @@
 
 	<dependencies>
 	<dependency>
+			<groupId>nl.jqno.equalsverifier</groupId>
+			<artifactId>equalsverifier</artifactId>
+			<version>3.4.3</version>
+			<scope>test</scope>
+		</dependency>
+	<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
