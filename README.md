@@ -83,12 +83,12 @@ In total, 13 JUnit tests were run, which returned a total code coverage of 99.4%
 ## Front End Navigation
 As a disclaimer, the application and pairing website is NOT publically available, and is <i> (currently) </i> only accessible from the hosts' (me) IP address. However the application as still be designed for general use in mind, meaning there is a landing page (with area for further expansion), with tabs leading to the database itself. Navigating to Combat Helper (or /dnd-combat-helper.html) will take you to the main screen, which if (for some reason) the database is unavailable, will redirect you to a 503 error page.
 
-**Index**
-![indexnav][indexnav]
-**Main Application**
-![dndnav][dndnav]
-**Error 503**
-![unavailerror][unavailerror]
+**Index** <br>
+![indexnav][indexnav] <br>
+**Main Application** <br>
+![dndnav][dndnav] <br>
+**Error 503** <br>
+![unavailerror][unavailerror] <br>
 
 
 ## Acknowledgements
