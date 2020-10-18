@@ -50,8 +50,10 @@ The Risk Assessment can be found [HERE](https://docs.google.com/spreadsheets/d/1
 This application is being tested using a mixture of JUnit, SpringBoot and Mockito.
 
 Using these three techniques together, I have split testing into 2 categories.
-	* [Unit Testing](#unit-tests)
-	* [Integration Testing](#integration-tests)
+* [Unit Testing](#unit-tests)
+* [Integration Testing](#integration-tests)
+
+![junittests][junittests]
 	
 ### Unit Tests
 Unit Tests are performed by running each accessible function in isolation to one another, allowing for logic checks in order to highlight if any new additions or changes to old code will break or disrupt already working features.
@@ -65,6 +67,11 @@ A total of 7 integration tests were perforomed, all returning successful.
 ## Testing (cont)
 In total, 13 JUnit tests were run, which returned a total code coverage of 99.4%.
 
+![testcoverage][testcoverage]
+
 ## Front End Navigation
 
 ## Aknowledgements
+
+[junittests]: https://i.gyazo.com/a9208f886e7d2a7443846e17a2e9a646.png
+[testcoverage]: https://i.gyazo.com/2b50a48ab96e34d8976651a521fcbb73.png
