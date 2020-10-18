@@ -83,23 +83,26 @@ In total, 13 JUnit tests were run, which returned a total code coverage of 99.4%
 ## Front End Navigation
 As a disclaimer, the application and pairing website is NOT publically available, and is <i> (currently) </i> only accessible from the hosts' (me) IP address. However the application as still be designed for general use in mind, meaning there is a landing page (with area for further expansion), with tabs leading to the database itself. Navigating to Combat Helper (or /dnd-combat-helper.html) will take you to the main screen, which if (for some reason) the database is unavailable, will redirect you to a 503 error page.
 
+**Index**
 ![indexnav][indexnav]
+**Main Application**
 ![dndnav][dndnav]
+**Error 503**
 ![unavailerror][unavailerror]
 
 
 ## Acknowledgements
 For this project I have used several different pieces of software and api's. These being:
 
-Jira: https://www.atlassian.com/software/jira
-Google Cloud Platform (mySQL server): https://cloud.google.com/
-Eclipse {Java): https://www.eclipse.org/
-Visual Studio Code (HTML, CSS and JavaScript): https://code.visualstudio.com/
-Bootstrap: https://getbootstrap.com/
-JUnit: https://junit.org/junit5/
-Mockito: https://site.mockito.org/
-Git: https://github.com/
-SpringBoot: https://spring.io/projects/spring-boot
+Jira: https://www.atlassian.com/software/jira <br>
+Google Cloud Platform (mySQL server): https://cloud.google.com/ <br>
+Eclipse {Java): https://www.eclipse.org/ <br>
+Visual Studio Code (HTML, CSS and JavaScript): https://code.visualstudio.com/ <br>
+Bootstrap: https://getbootstrap.com/ <br>
+JUnit: https://junit.org/junit5/ <br>
+Mockito: https://site.mockito.org/ <br>
+Git: https://github.com/ <br>
+SpringBoot: https://spring.io/projects/spring-boot <br>
 
 I would also like to thank the QA Trainers for their assistance and help, as well as my fellow training colleagues.
 
