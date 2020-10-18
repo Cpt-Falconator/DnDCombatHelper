@@ -5,6 +5,8 @@
 	* [Requirements](#requirements)
 	* [Solution](#solution)
 * [Planning](#planning)
+	* [Jira Board](#jiraboard)
+	* [Entity Relationship Diagram](#entityrelationshipdiagram)
 * [Risk Assessment](#risk-assessment)
 * [Testing](#testing)
 	* [Unit Tests](#unit-tests)
@@ -46,7 +48,7 @@ The application was planned and executed alongside a Jira Kanban board, which he
 
 The Kanban board was split up into User Stories with subsequent tasks which depending on these stories being reached. Once a feature was in progress, it was moved to a "under development" section, and then subsequently moved to a completed category once acomplished.
 
-### ERD
+### Entity Relationship Diagram
 I started by planning my database to function by allowing the "Dungeon Master" to add characters and monster, which can be quickly referenced and called into an encounter and can be reused in multiple different encounters throughout various sessions.
 ![proposederd][proposederd]
 
