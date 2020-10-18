@@ -11,7 +11,7 @@
 	* [Integration Tests](#integration-tests)
 * [Testing (cont)](#testing-cont)
 * [Front End Navigation](#front-end-navigation)
-* [Aknowledgements](#aknowledgements)
+* [Acknowledgements](#acknowledgements)
 
 ## Brief
 The initial brief has the following objective:
@@ -41,6 +41,17 @@ Above is a very simplistic overview of how my application will meet the requirem
 
 ## Planning
 
+### Jira Board
+The application was planned and executed alongside a Jira Kanban board, which helped keep track of all the functional requirements and gave a good understanding as to the progress towards MVP, as well as any fuether features and their coreleating priorities.
+
+The Kanban board was split up into User Stories with subsequent tasks which depending on these stories being reached. Once a feature was in progress, it was moved to a "under development" section, and then subsequently moved to a completed category once acomplished.
+
+### ERD
+I started by planning my database to function by allowing the "Dungeon Master" to add characters and monster, which can be quickly referenced and called into an encounter and can be reused in multiple different encounters throughout various sessions.
+![proposederd][proposederd]
+
+However, due to time constaraints and a neccesity to get a MVP met, I opted to shrink the database into (what would have been) a <i> view </i> for the database, by only showing the most neccesary information in one table. Currently for each new encounter, all data must be re-entered, however this could be expanded upon in the future.
+![developederd][developederd]
 
 
 ## Risk Assessment
@@ -71,7 +82,9 @@ In total, 13 JUnit tests were run, which returned a total code coverage of 99.4%
 
 ## Front End Navigation
 
-## Aknowledgements
+## Acknowledgements
 
 [junittests]: https://i.gyazo.com/a9208f886e7d2a7443846e17a2e9a646.png
 [testcoverage]: https://i.gyazo.com/2b50a48ab96e34d8976651a521fcbb73.png
+[proposederd]: https://i.gyazo.com/0192dd175a32980675310e90ce974537.png
+[developederd]: https://i.gyazo.com/9a93f728a8e991a6dc088adf229dd95a.png
