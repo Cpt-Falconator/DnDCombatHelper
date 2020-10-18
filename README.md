@@ -81,10 +81,32 @@ In total, 13 JUnit tests were run, which returned a total code coverage of 99.4%
 ![testcoverage][testcoverage]
 
 ## Front End Navigation
+As a disclaimer, the application and pairing website is NOT publically available, and is <i> (currently) </i> only accessible from the hosts' (me) IP address. However the application as still be designed for general use in mind, meaning there is a landing page (with area for further expansion), with tabs leading to the database itself. Navigating to Combat Helper (or /dnd-combat-helper.html) will take you to the main screen, which if (for some reason) the database is unavailable, will redirect you to a 503 error page.
+
+![indexnav][indexnav]
+![dndnav][dndnav]
+![unavailerror][unavailerror]
+
 
 ## Acknowledgements
+For this project I have used several different pieces of software and api's. These being:
+
+Jira: https://www.atlassian.com/software/jira
+Google Cloud Platform (mySQL server): https://cloud.google.com/
+Eclipse {Java): https://www.eclipse.org/
+Visual Studio Code (HTML, CSS and JavaScript): https://code.visualstudio.com/
+Bootstrap: https://getbootstrap.com/
+JUnit: https://junit.org/junit5/
+Mockito: https://site.mockito.org/
+Git: https://github.com/
+SpringBoot: https://spring.io/projects/spring-boot
+
+I would also like to thank the QA Trainers for their assistance and help, as well as my fellow training colleagues.
 
 [junittests]: https://i.gyazo.com/a9208f886e7d2a7443846e17a2e9a646.png
 [testcoverage]: https://i.gyazo.com/2b50a48ab96e34d8976651a521fcbb73.png
-[proposederd]: https://i.gyazo.com/0192dd175a32980675310e90ce974537.png
+[proposederd]: https://i.gyazo.com/0a54696de9f6aeec2e3a21c219f7782d.png
 [developederd]: https://i.gyazo.com/9a93f728a8e991a6dc088adf229dd95a.png
+[indexnav]: https://i.gyazo.com/12f147c9e0f66870d848805bc9530139.png
+[dndnav]: https://i.gyazo.com/59bffd08c6d77b390d99862848b52a22.png
+[unavailerror]: https://i.gyazo.com/c4f76c0e2605328d44e5c6d211175f41.png
