@@ -42,11 +42,21 @@ My solution to this objective and requirements is to create an application that 
 Above is a very simplistic overview of how my application will meet the requirements, however a more detailed list can be found in the [following section](#planning)
 
 ## Planning
+From the outset, I knew that the basic functionaliy required would be;
+- Add combatants to a list containing information that would be helpful to have on hand, such as HP, Armour Class, and most importantly their initiative. (Create)
+- Display the entire list (preferably in order of initiative) of the all current combatants. (Read)
+- Allow the user to raise or reduce the combatant HP or Armor Class to help keep an easier track of stats. (Update)
+- Remove fallen combatants from the list as to not display useless information at once. (Delete)
+
+However for functional requirements the ordering of the list is not a neccesary addition.
+
+In addition to all of the above, It would be desired to have extra tables with more data, allowing for faster creation of combatants and storage of the campaigns player information. This will be expanded upon in the [ERD](#entity-relationship-diagram).
 
 ### Jira Board
 The application was planned and executed alongside a Jira Kanban board, which helped keep track of all the functional requirements and gave a good understanding as to the progress towards MVP, as well as any fuether features and their coreleating priorities.
 
 The Kanban board was split up into User Stories with subsequent tasks which depending on these stories being reached. Once a feature was in progress, it was moved to a "under development" section, and then subsequently moved to a completed category once acomplished.
+![jiraboard][jiraboard]
 
 ### Entity Relationship Diagram
 I started by planning my database to function by allowing the "Dungeon Master" to add characters and monster, which can be quickly referenced and called into an encounter and can be reused in multiple different encounters throughout various sessions.
@@ -104,6 +114,7 @@ Bootstrap: https://getbootstrap.com/ <br>
 JUnit: https://junit.org/junit5/ <br>
 Mockito: https://site.mockito.org/ <br>
 Git: https://github.com/ <br>
+Postman (fetch requests): https://www.postman.com/ <br>
 SpringBoot: https://spring.io/projects/spring-boot <br>
 
 I would also like to thank the QA Trainers for their assistance and help, as well as my fellow training colleagues.
@@ -115,3 +126,4 @@ I would also like to thank the QA Trainers for their assistance and help, as wel
 [indexnav]: https://i.gyazo.com/12f147c9e0f66870d848805bc9530139.png
 [dndnav]: https://i.gyazo.com/59bffd08c6d77b390d99862848b52a22.png
 [unavailerror]: https://i.gyazo.com/c4f76c0e2605328d44e5c6d211175f41.png
+[jiraboard]: https://i.gyazo.com/b7419c70738340f2efa64e44a6043c51.png
