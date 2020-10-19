@@ -13,6 +13,7 @@
 	* [Integration Tests](#integration-tests)
 * [Testing (cont)](#testing-cont)
 * [Front End Navigation](#front-end-navigation)
+* [Future Improvements](#future-improvements)
 * [Acknowledgements](#acknowledgements)
 
 ## Brief
@@ -93,7 +94,7 @@ In total, 13 JUnit tests were run, which returned a total code coverage of 99.4%
 ![testcoverage][testcoverage]
 
 ## Front End Navigation
-As a disclaimer, the application and pairing website is NOT publically available, and is <i> (currently) </i> only accessible from the hosts' (me) IP address. However the application as still be designed for general use in mind, meaning there is a landing page (with area for further expansion), with tabs leading to the database itself. Navigating to Combat Helper (or /dnd-combat-helper.html) will take you to the main screen, which if (for some reason) the database is unavailable, will redirect you to a 503 error page.
+As a disclaimer, the application and pairing website is NOT publically available, and is <i> (currently) </i> only accessible from the hosts' (myself) IP address. However the application has still been designed for general use in mind, meaning there is a landing page (with area for further expansion), with tabs leading to the database itself. Navigating to Combat Helper (or /dnd-combat-helper.html) will take you to the main screen, which if (for some reason) the database is unavailable, will redirect you to a 503 error page.
 
 **Index** <br>
 ![indexnav][indexnav] <br>
@@ -102,6 +103,13 @@ As a disclaimer, the application and pairing website is NOT publically available
 **Error 503** <br>
 ![unavailerror][unavailerror] <br>
 
+## Future Improvements
+As this project was lowered in scope to reach the MVP within the time given, a few features had to be cut or postponed. I believe these features could be added in the future without having to change a majority of the existing codebase. Which means easier/cleaner integration. <br>
+These features would be, but are not limited to:
+- Automatically reordering the list of combatants based on Initiative (potentially being a toggled option)
+- A log in system so that each user may have their own set of tables.
+- A character sheet page, where users can enter player characters or NPC's to store their data that can be re-used / added to combats at any time.
+- A table of real players details, to keep information handy in terms of communication (potentially a schedule of when they're free, to help plan sessions)
 
 ## Acknowledgements
 For this project I have used several different pieces of software and api's. These being:
