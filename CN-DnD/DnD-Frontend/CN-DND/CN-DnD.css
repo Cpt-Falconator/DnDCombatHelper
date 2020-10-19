@@ -1,0 +1,57 @@
+body{
+    background-image: url("https://i.imgur.com/gddAmAV.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: rgb(245, 210, 122);
+}
+
+#Combats{
+    border-style: solid;
+    border-radius: 3px;
+    border-color: darkred;
+    margin-right: inherit;
+}
+
+#CombatHeading{
+    margin-left: 1%;
+    text-decoration: underline;
+}
+
+.container
+{
+    display:table;
+}
+.row
+{
+    display:table-row;
+}
+.col
+{
+    display:table-cell;
+    align-content: center;
+    border:1px solid black;
+    border-radius: 2px;
+    padding:1px;
+    background-color: lightgray;
+    width:fit-content;
+}
+p
+{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+button
+{
+    font-size: small;
+    height: 25px;
+    width:25px;
+}
+
+#in_FighterPC
+{
+    margin: auto;
+    display: flex;
+}
+
